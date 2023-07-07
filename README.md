@@ -1,10 +1,8 @@
 # Helmet
 
-Helmet helps secure .NET apps by setting HTTP response headers.
+Secures .NET apps by setting HTTP response headers. Exactly like [Helmet](https://github.com/helmetjs/helmet), but for C#.
 
 ## Get started
-
-Here's a sample .NET app that uses `Helmet`:
 
 ```cs
 using Helmet;
@@ -35,7 +33,7 @@ By default, `Helmet` sets the following headers:
 - `X-Powered-By`: Info about the web server. Removed because it could be used in simple attacks
 - `X-XSS-Protection`: Legacy header that tries to mitigate [XSS attacks](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting), but makes things worse, so Helmet disables it
 
-Headers can also be disabled. For example, here's how you disable the `Content-Security-Policy` and `X-Download-Options` headers:
+Headers can also be disabled. For example, here's how you disable the `Cross-Origin-Opener-Policy` headers:
 
 ```cs
 using Helmet;

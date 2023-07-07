@@ -13,6 +13,6 @@ public class HelmetOptions
     public bool UseDownloadOptions { get; set; } = true;
     public bool UseFrameOptions { get; set; } = true;
     public bool UsePermittedCrossDomainPolicies { get; set; } = true;
-    public bool RemoveXPoweredBy { get; set; } = true;
+    public bool UseXPoweredBy { get; set; } = false;
     public bool UseXXssProtection { get; set; } = true;
 }
