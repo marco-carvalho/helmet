@@ -1,5 +1,7 @@
 # Helmet
 
+[![NuGet version](https://buildstats.info/nuget/Helmet)](https://www.nuget.org/packages/Helmet/) [![Build status](https://github.com/marco-carvalho/helmet/actions/workflows/build.yml/badge.svg)](https://github.com/marco-carvalho/helmet/actions/workflows/build.yml/badge.svg) [![Code coverage](https://codecov.io/gh/marco-carvalho/helmet/branch/main/graph/badge.svg)](https://codecov.io/gh/marco-carvalho/helmet)
+
 Secures .NET apps by setting HTTP response headers. Exactly like [Helmet](https://github.com/helmetjs/helmet), but for C#.
 
 ## Get started
