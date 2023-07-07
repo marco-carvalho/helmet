@@ -25,15 +25,15 @@ By default, `Helmet` sets the following headers:
 - `Cross-Origin-Opener-Policy`: Helps process-isolate your page
 - `Cross-Origin-Resource-Policy`: Blocks others from loading your resources cross-origin
 - `Origin-Agent-Cluster`: Changes process isolation to be origin-based
-- `Referrer-Policy`: Controls the [`Referer`][Referer] header
+- `Referrer-Policy`: Controls the [`Referer`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer) header
 - `Strict-Transport-Security`: Tells browsers to prefer HTTPS
-- `X-Content-Type-Options`: Avoids [MIME sniffing]
+- `X-Content-Type-Options`: Avoids [MIME sniffing](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing)
 - `X-DNS-Prefetch-Control`: Controls DNS prefetching
 - `X-Download-Options`: Forces downloads to be saved
-- `X-Frame-Options`: Legacy header that mitigates [clickjacking] attacks
+- `X-Frame-Options`: Legacy header that mitigates [clickjacking](https://en.wikipedia.org/wiki/Clickjacking) attacks
 - `X-Permitted-Cross-Domain-Policies`: Controls cross-domain behavior for Adobe products, like Acrobat
 - `X-Powered-By`: Info about the web server. Removed because it could be used in simple attacks
-- `X-XSS-Protection`: Legacy header that tries to mitigate [XSS attacks][XSS], but makes things worse, so Helmet disables it
+- `X-XSS-Protection`: Legacy header that tries to mitigate [XSS attacks](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting), but makes things worse, so Helmet disables it
 
 Headers can also be disabled. For example, here's how you disable the `Content-Security-Policy` and `X-Download-Options` headers:
 
