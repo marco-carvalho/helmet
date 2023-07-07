@@ -22,9 +22,11 @@ jobs:
 
     - run: dotnet restore
 
-    - run: dotnet build Helmet.csproj --no-restore
+    - run: dotnet build src/Helmet.csproj --no-restore
 
-    - run: dotnet pack ./Helmet.csproj --no-build --output .
+    - run: dotnet test
+
+    - run: dotnet pack src/Helmet.csproj --no-build --output .
 
     - run: dotnet nuget push *.nupkg --api-key ${API_KEY} --source ${SOURCE} --skip-duplicate
       env:
