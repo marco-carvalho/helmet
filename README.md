@@ -45,7 +45,7 @@ var app = builder.Build();
 
 app.UseHelmet(options =>
 {
-    // This disables Cross-Origin-Opener-Policy
+    // This only disables Cross-Origin-Opener-Policy
     options.UseCrossOriginOpenerPolicy = false;
 });
 
