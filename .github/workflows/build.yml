@@ -1,0 +1,32 @@
+name: Pack
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+      pull-requests: write
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+
+    - run: dotnet restore
+
+    - run: dotnet build Helmet.csproj --no-restore
+
+    - run: dotnet pack ./Helmet.csproj --no-build --output .
+
+    - run: dotnet nuget push *.nupkg --api-key ${API_KEY} --source ${SOURCE} --skip-duplicate
+      env:
+        API_KEY: ${{ secrets.NUGET_API_KEY }}
+        SOURCE: "https://api.nuget.org/v3/index.json"
