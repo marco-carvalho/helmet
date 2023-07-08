@@ -6,6 +6,14 @@ Secures .NET apps by setting HTTP response headers. Exactly like [Helmet](https:
 
 ## Get started
 
+Install it via the .NET SDK:
+
+```sh
+dotnet add package Helmet
+```
+
+Use it in your project:
+
 ```cs
 using Helmet;
 
