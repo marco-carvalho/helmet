@@ -1,7 +1,7 @@
 name: Pack
 
 on:
-  push:
+  pull_request:
     branches:
       - "main"
 
@@ -27,8 +27,3 @@ jobs:
     - run: dotnet test
 
     - run: dotnet pack src/Helmet.csproj --no-build --output .
-
-    - run: dotnet nuget push *.nupkg --api-key ${API_KEY} --source ${SOURCE} --skip-duplicate
-      env:
-        API_KEY: ${{ secrets.NUGET_API_KEY }}
-        SOURCE: "https://api.nuget.org/v3/index.json"
