@@ -25,6 +25,7 @@ public class HelmetMiddleware
             { () => _options.UseCrossOriginResourcePolicy, (HttpHeaderKeyConstants.CrossOriginResourcePolicy, HttpHeaderValueConstants.CrossOriginResourcePolicy) },
             { () => _options.UseOriginAgentCluster, (HttpHeaderKeyConstants.OriginAgentCluster, HttpHeaderValueConstants.OriginAgentCluster) },
             { () => _options.UseReferrerPolicy, (HttpHeaderKeyConstants.ReferrerPolicy, HttpHeaderValueConstants.ReferrerPolicy) },
+            { () => _options.UseServer, (HttpHeaderKeyConstants.Server, null) },
             { () => _options.UseStrictTransportSecurity, (HttpHeaderKeyConstants.StrictTransportSecurity, HttpHeaderValueConstants.StrictTransportSecurity) },
             { () => _options.UseXContentTypeOptions, (HttpHeaderKeyConstants.XContentTypeOptions, HttpHeaderValueConstants.XContentTypeOptions) },
             { () => _options.UseDnsPrefetchControl, (HttpHeaderKeyConstants.DnsPrefetchControl, HttpHeaderValueConstants.DnsPrefetchControl) },
