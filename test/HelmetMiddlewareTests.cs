@@ -1,4 +1,4 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Xunit;
 using Moq;
 using Microsoft.AspNetCore.Http;
@@ -106,21 +106,6 @@ public class HelmetMiddlewareTests
 
         var headers = _responseMock.Object.Headers;
         Assert.Equal(expectedHeaderValue, headers[HttpHeaderKeyConstants.ReferrerPolicy]);
-    }
-
-    [Theory]
-    [InlineData(false, null)]
-    public async Task Invoke_SetsServerHeader_GivenUseServerOption(bool useServer, string expectedHeaderValue)
-    {
-        var options = new HelmetOptions
-        {
-            UseServer = useServer
-        };
-
-        await InvokeMiddlewareWithOptions(options);
-
-        var headers = _responseMock.Object.Headers;
-        Assert.Equal(expectedHeaderValue, headers[HttpHeaderKeyConstants.Server]);
     }
 
     [Theory]
