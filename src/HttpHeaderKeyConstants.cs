@@ -7,7 +7,6 @@ public static class HttpHeaderKeyConstants
     public const string CrossOriginResourcePolicy = "Cross-Origin-Resource-Policy";
     public const string OriginAgentCluster = "Origin-Agent-Cluster";
     public const string ReferrerPolicy = "Referrer-Policy";
-    public const string Server = "Server";
     public const string StrictTransportSecurity = "Strict-Transport-Security";
     public const string XContentTypeOptions = "X-Content-Type-Options";
     public const string DnsPrefetchControl = "X-DNS-Prefetch-Control";
